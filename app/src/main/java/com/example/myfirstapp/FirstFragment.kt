@@ -1,0 +1,72 @@
+package com.example.myfirstapp
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
+import com.example.myfirstapp.databinding.FragmentFirstBinding
+import org.w3c.dom.Text
+
+/**
+ * A simple [Fragment] subclass as the default destination in the navigation.
+ */
+class FirstFragment : Fragment() {
+
+private fun countMe(view: View) {
+    // Get the text view
+    val showCountTextView = view.findViewById<TextView>(R.id.textview_first)
+    // Get the value of the text view
+    val countString = showCountTextView.text.toString()
+    // Convert value to a number and increment it
+    var count = countString.toInt()
+    count++
+    // Display the new value in the text view
+    showCountTextView.text = count.toString()
+}
+
+private var _binding: FragmentFirstBinding? = null
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+      _binding = FragmentFirstBinding.inflate(inflater, container, false)
+      return binding.root
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+// Was supposed to make random button display
+// a random number between the range of what the count displayed.
+// However, it will only work if safe args work, and currently,
+// safe args doesn't work right.
+//        view.findViewById<Button>(R.id.random_button).setOnClickListener {
+//            val showCountTextView = view.findViewById<TextView>(R.id.textview_first)
+//            val currentCount = showCountTextView.text.toString().toInt()
+//            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(currentCount)
+//            findNavController().navigate(action)
+//        }
+        view.findViewById<Button>(R.id.toast_button).setOnClickListener {
+            val myToast = Toast.makeText(context, getString(R.string.toast_button_message), Toast.LENGTH_SHORT)
+            myToast.show()
+        }
+        view.findViewById<Button>(R.id.count_button).setOnClickListener {
+            countMe(view)
+        }
+    }
+
+override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}
