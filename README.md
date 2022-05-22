@@ -59,7 +59,7 @@ For a walk through of the working parts of the app and a surface level explanati
 * [Tutorial](https://developer.android.com/codelabs/build-your-first-android-app-kotlin#0)
 * [Android Developer](https://developer.android.com/)
 * [Gradle](https://discuss.gradle.org/)
-* [DelftStack](https://www.delftstack.com/howto/java/is-not-abstract-and-does-not-override/)
+* [DelftStack](https://www.delftstack.com/)
 * [Geeks for Geeks](https://www.geeksforgeeks.org/)
 * [Stack Overflow](https://stackoverflow.com/)
 
@@ -68,6 +68,6 @@ For a walk through of the working parts of the app and a surface level explanati
 
 * How to change the background color of buttons without getting rid of action bar
 * How to implement safe args without causing errors
-* How to fix abstract class and other errors that resulted from implementing safe args and trying to rebuild the project
+* Fix abstract class/other errors that resulted from implementing safe args and trying to rebuild the project
 * Start a new project from scratch where I create something original
 * Learn how to use Flutter/Dart with Android Studio
