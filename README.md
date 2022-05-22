@@ -39,12 +39,9 @@ increments the number in the middle of the screen by one. The "Random" button wa
 and the current value of count. If it had worked, when clicked, a message with the random number would have displayed at the top of the screen. However, part of the code
 was dependent upon getting safe args working. Thus, as explained above, the "Random" button currently doesn't do anything.
 
-For a walk through of the working parts of the app and a surface level explanation of the code I understand, watch the video below.
+For a demonstration of the working parts of the app watch the video below.
 
-
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the app running and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[App Demo Video](https://youtu.be/PJxGUJKAoxI)
 
 
 # Development Environment
